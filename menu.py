@@ -1327,6 +1327,31 @@ def criação_personagem():
   escolha_raça()
 
 
+def sobre_mim():
+  apagador()
+  print('''
+RPG - A Torre Sangrenta
+
+Um jogo baseado em texto.
+
+  
+## Me encontre
+Se você jogar o jogo, sinta-se a vontade de me chamar no discord.
+
+## Versão
+* Python 3.7
+
+# sobre este projeto
+Comecei a desenvolver ele durante o projeto Vamo AI do Ifood com parceria da Resilia.
+
+# Muito obrigado por jogar!
+
+''')
+  voltar = input('[ENTER] - Voltar')
+  while True:
+    if voltar == '':
+      menu_principal()
+      break
 
 def menu_principal():
   while True:
@@ -1341,7 +1366,7 @@ def menu_principal():
                                                                                        /  .-.                                                        |
                                                                                       |  /   \                 1 - Novo jogo                         |
                                                                                       | |\_.  |                2 - Pontuação                         |
-                                                                                      |\|  | /|                3 - Sobre mim                         |
+                                                                                      |\|  | /|                3 - Sobre                             |
                                                                                       | `---' |                4 - Sair                              |
                                                                                       |       |                                                      | 
                                                                                       |       |                                                     /
@@ -1368,6 +1393,9 @@ def menu_principal():
               break
             #Sobre mim
             elif escolha == 3:
+              
+              sobre_mim()
+
               pass
               break
             #Sair
