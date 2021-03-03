@@ -10,11 +10,11 @@ Se você jogar o jogo, sinta-se a vontade de me chamar no discord.
 * Python 3.7
 
 # sobre este projeto
-Comecei a desenvolver ele durante o projeto Vamo AI.
+Comecei a desenvolver ele durante o projeto Vamo AI do Ifood com parceria da Resilia.
 
 # Muito obrigado!
 
 
 # Screen Shots
-O menu inicial é esse
-![]()
+O menu inicial é esse:
+<img src="https://i.imgur.com/4kK442p.png" alt="Imagem Menu" style="height: 100px; width:100px;"/>
