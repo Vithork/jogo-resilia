@@ -1,6 +1,11 @@
 # RPG - A Torre Sangrenta
 
   Um jogo baseado em texto.
+ 
+# Historia
+E se a salvação do mundo estivesse em suas mãos?  Você arriscaria confiar nos seus maiores inimigos a troco de salvar o seu povo?
+Há décadas a vida  não era como antes no Reino de Kwame . As músicas dos Bardos repletas de histórias e poesias não ressoavam mais. As tabernas que antes abrigavam alegria e muito rum , agora se encontram desertas e de tanque vazio. Os sorrisos não eram mais vistos e o contato físico era proibido por lei. O reinado que antes era movido por alegria e união, subitamente passou a ser movido por dor e sofrimento até os dias de hoje.
+
 
   
 ## Me encontre
