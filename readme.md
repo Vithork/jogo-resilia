@@ -23,8 +23,8 @@ O menu inicial é esse:
 <img src="https://i.imgur.com/4kK442p.png" alt="Imagem Menu" style="height: 100px; width:100px;"/>
 
 # Art Ascii
-https://www.asciiart.eu/
-https://www.patorjk.com/software/taag/#p=display&v=2&f=3D-ASCII&t=Vamo%20AI
+* [ASCIIART](https://www.asciiart.eu/)
+* [PATORJK](https://www.patorjk.com/software/taag/#p=display&v=2&f=3D-ASCII&t=Vamo%20AI)
 
 # Muito obrigado!
 
