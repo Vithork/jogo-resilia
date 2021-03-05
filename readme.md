@@ -1,4 +1,4 @@
-# RPG - A Torre Sangrenta
+# 🕹️ RPG - A Torre Sangrenta
 
   Um jogo baseado em texto.
  
