@@ -11,7 +11,7 @@ Há décadas a vida  não era como antes no Reino de Kwame . As músicas dos Bar
 ## Me encontre
 Se você jogar o jogo, sinta-se a vontade de me chamar no discord.
 
-## Versão
+##🐍 Versão
 * Python 3.7
 
 # sobre este projeto
