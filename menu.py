@@ -1,4 +1,14 @@
-title = '''
+def vermelho(text): return (f'\033[1;31m {text}\033[00m')
+def verde(text): return (f'\033[92m {text}\033[00m')
+def amarelo(text): return (f'\033[93m {text}\033[00m')
+def lightpurple(text): return (f'\033[94m {text}\033[00m')
+def roxo(text): return (f'\033[95m {text}\033[00m')
+def cyan(text): return (f'\033[96m {text}\033[00m' )
+def cinza(text): return (f'\033[97m {text}\033[00m' )
+def negrito(text): return (f'\033[;1m{text}\033[00m' )
+def fundo(text): return (f' \033[1;107m{text}')
+
+title = ('''
                                              |-----+-------------------------------------------------------------------------------------------------------------------------------------------+--|
                                              |                                                                                                                                                    |
                                              |                                                                                                                                                    |
@@ -23,7 +33,21 @@ title = '''
 
 
 
-    '''
+
+    ''')
+
+expulso = '''
+
+███████╗██╗  ██╗██████╗ ██╗   ██╗██╗     ███████╗ ██████╗ 
+██╔════╝╚██╗██╔╝██╔══██╗██║   ██║██║     ██╔════╝██╔═══██╗
+█████╗   ╚███╔╝ ██████╔╝██║   ██║██║     ███████╗██║   ██║
+██╔══╝   ██╔██╗ ██╔═══╝ ██║   ██║██║     ╚════██║██║   ██║
+███████╗██╔╝ ██╗██║     ╚██████╔╝███████╗███████║╚██████╔╝
+╚══════╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚══════╝╚══════╝ ╚═════╝ 
+                                                          
+
+
+'''
 cidade = '''
                               [\'
                               |\)                                ____                                                                    
@@ -33,8 +57,8 @@ cidade = '''
                             J    \   ,-(         )_         `---'
                            Y/T`-._\ (     (       _)                 __                      =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
                            /[|   ]|  `-(__  ___)-`  |\          ,-(  __)                     = E se a salvação do mundo estivesse em suas mãos?                                                    =
-                           | |    |      (__)       J'         (     )                       = Você arriscaria confiar nos seus maiores inimigos a troco de salvar o seu povo?                     =
-               _           | |  ] |    _           /;\          `-  '                        = Há décadas a vida  não era como antes no Reino de Kwame.                                            =
+                           | |    |      (__)       J'         (     )                       = Você arriscaria enfrentar os seu maiores  inimigos a troco de salvar um povo desconhecido?          =
+               _           | |  ] |    _           /;\          `-  '                        = Há décadas a vida não era como antes no Reino de Kwame.                                             =
               (,,)        [| |    |    L'         /;  \'                                      = As músicas dos Bardos repletas de histórias e poesias não ressoavam mais.                           =
                          /||.| /\ |   /\         /.,-._\        ___ _                        = As tabernas que antes abrigavam alegria e muito rum , agora se encontram desertas e de tanque vazio.=
                         /_|||| || |  /  \        | |{  |       (._.'_)                       = Os sorrisos não eram mais vistos e o contato físico era proibido por lei.                           =
@@ -99,24 +123,24 @@ dialogo_torre1 = '''
 
    ______________________________
  / \                             \.
-|   | Ao chega na torre você sente|.
- \_ | um tremendo odor de algo    |.                
-    | morto. Além de um sentimento|.
-    | de presença maligna vindo   |.
-    | daquela torre.              |                 
-    |Ao redor da torre, não tinha |.
-    |nada além de árvores e névoa.|.
-    |Não tinha nenhuma aldeia, e  |.                         
-    |era bastante afastado de     |.                
-    |Kwame.     |.                         
-    |Na torre, você observa uma   |.        
-    |porta, que é a única entrada |.        
-    |Atenção é necessária apartir |.        
+|   |Ao chega na torre você sente  |.
+ \_ |um tremendo odor de algo      |.                
+    |morto. Além de um sentimento  |.
+    |de presença maligna vindo     |.
+    |daquela torre.                |                 
+    |Ao redor da torre, não tinha  |.
+    |nada além de árvores e névoa. |.
+    |Não tinha nenhuma aldeia, e   |.                         
+    |era bastante afastado de      |.                
+    |Kwame.                        |.                         
+    |Na torre, você observa uma    |.        
+    |porta, que é a única entrada  |.        
+    |Atenção é necessária apartir  |.        
     |de agora, pois perigos não vão|.
-    |faltar.                      |. 
-    |                             |.
-    |                             |.
-    |   _________________________|___
+    |faltar.                       |. 
+    |                              |.
+    |                              |.
+    |   ___________________________|
     |  /                            /.
     \_/vi__________________________/.
     '''
@@ -126,15 +150,15 @@ dialogo_torre2 = '''
  ______________________________
  / \                             \.
 |   | A 5 metros da torre, você   |.
- \_ | enxerga uma figura surgindo |.                
-    | por trás da névoa.          |
-    | Era um antigo inimigo, que  |.
-    | você já enfrentou em seu    |                 
-    | passado. Ele parece estar de|
-    |passagem, mas não percebeu sua|.
-    |presença.                    |.                         
-    |                             |.
-    |   _________________________|___
+ \_ |enxerga uma figura surgindo  |.                
+    |por trás da névoa.           |
+    |Era um antigo inimigo, que   |.
+    |você já enfrentou em seu     |                 
+    |passado. Ele parece estar de |
+    |passagem, mas não percebeu   |.
+    |sua presença.                |.                         
+    |                              |.
+    |   ____________________________|
     |  /                            /.
     \_/vi__________________________/.
     '''
@@ -168,12 +192,12 @@ reaper = '''
                                            ||__           `'-,
                                          `)||_ ```'--..       '\'      ________________________________
                      _                    /|//}        ``--._  |      |                              |
-                  .'` `'.                /////}              `\/      |       Olá aventureiros!      |
-                 /  .""".\              //{///                        |                              |
-                /  /_  _''            // `||                          |       Qual o seu nome?       |
-                | |(_)(_)||          _//   ||                         |                              |
+                  .'` `'.                /////}              `\/      |     Olá aventureiro!         |
+                 /  .""".\              //{///                        | bem-vindo nesta nova jornada!|
+                /  /_  _''            // `||                          | Você embarcará numa viagem   |
+                | |(_)(_)||          _//   ||                         | para o Reino de Kwame.       |
                 | |  /\  )|        _///\   ||                         |______________________________|
-                | |L====J |       / |/ |   ||   
+                | |L====J |       / |/ |   ||                         
                /  /'-..-' /    .'`  \  |   ||
               /   |  :: | |_.-`      |  \  ||
              /|   `\-::.| |          \   | ||
@@ -309,13 +333,13 @@ evento2 = '''
    ______________________________
  / \                             \.
 |   | … e o silêncio se faz mais  |.
- \_ | presente. A rua acumulava   |.                
-    | folhas e terra,como se a    |.
-    | tempo não aparecesse alguém |.
-    | para limpar.Ao longe,podia- |                 
+ \_ |presente. A rua acumulava    |.                
+    |folhas e terra, como se a    |.
+    |tempo não aparecesse alguém  |.
+    |para limpar. Ao longe, podia-|                 
     |se sentir olhares vindo nos  |.
     |cantos das janelas das poucas|.
-    | casas que se encontravam    |.                         
+    |casas que se encontravam     |.                         
     |entre os comércios,todos     |.                
     |fechados, exceto por uma     |.                         
     |remota tenda vendendo        |.        
@@ -332,18 +356,15 @@ evento2 = '''
 evento1 = """
    ______________________________
  / \                             \.           
-|   | Você chega em Kwame a procu |.
- \_ | de um lugar para descansar |  
-    | mas ve a cidade completame-|.
-    | nte deserta. Os guardas que|.
-    | deveriam estar protegendo  |.
-    | a cidade já não estão mais |.
-    | por aí. É importante estar |.
-    | em alerta para um possível |.
-    | conflito.                  |.
-    |                            |.
-    |                            |.
-    |                            |.
+|   | Você chega em Kwame a pro- |.
+ \_ | cura de um lugar para des- |   
+    | cansar mas ve a cidade com-|.
+    | pletamente deserta. Os gua-|.
+    | rdas deveriam estar prote- |.
+    | gendo a cidade já não estão|.
+    | estão mais por aí. É impo- |.
+    | rtante estar em alerta para|.
+    | um possível conflito.      |.
     |                            |.
     |   _________________________|___
     |  /                            /.
@@ -380,30 +401,30 @@ ___|_______|__[ == ==]/.::::::;;;:::::::::::::::;;;:::::::.\[=  == ]___|_____
 
 
 evento2_ascii = '''
-       .-""-.
-      /-.{}  \'
-      | _\__.|
-      \/-)- \/
-       \ =  /
-  .---./`--`\.--._
- /     `;--'`     \'
-;        /`       ;
-|       |*        |
-/   |   |     |    \'
-|    \  |*    /    |
-\_   |\_|____/|  __/
-  \__//======\\__/
-  / //_      _\\ \'
-  -'  |`""""`|  `-
-      |  L   |
-      >_ || _<
-      |  ||  |
-      |  ||  |
-     /   ||   \'
-    /    /,    \'
-     `|"|`"|"|"`
-     /  )  /  ) 
-    /__/  /__/
+                                                                                               .-""-.
+                                                                                              /-.{}  \'
+                                                                                              | _\__.|
+                                                                                              \/-)- \/
+                                                                                               \ =  /
+                                                                                          .---./`--`\.--._
+                                                                                         /     `;--'`     \'
+                                                                                        ;        /`       ;
+                                                                                        |       |*        |
+                                                                                        /   |   |     |    \'
+                                                                                        |    \  |*    /    |
+                                                                                        \_   |\_|____/|  __/
+                                                                                          \__//======\\__/
+                                                                                          / //_      _\\ \'
+                                                                                          -'  |`""""`|  `-
+                                                                                              |  L   |
+                                                                                              >_ || _<
+                                                                                              |  ||  |
+                                                                                              |  ||  |
+                                                                                             /   ||   \'
+                                                                                            /    /,    \'
+                                                                                             `|"|`"|"|"`
+                                                                                             /  )  /  ) 
+                                                                                            /__/  /__/
 '''
 tenda = '''
 
@@ -433,10 +454,7 @@ evento3 = '''
     | e remendadas               |.
     | Ao ouvir seus passos, ela  |.
     | se assusta e se afasta.    |.
-    |                            |.
-    |                            |.
-    |                            |.
-    |                            |.
+    |                            |. 
     |   _________________________|___
     |  /                            /.
     \_/vi__________________________/.
@@ -444,39 +462,53 @@ evento3 = '''
 
 
 hospedaria = '''                
-                                /   \'
-                               |    |
-                              /_.--._\'
-                            ,  |=   |
-                          ,/ \,|  =-|
-                        ,/ /`\ \,   |
-                      ,/ /`___`\ \,-|
-                    ,/ /'.-:";-.`\ \|
-                  ,/ /` //_|_|_\\ `\ \, ,/\,
-                ,/ /`   ||_|_|_||   `\;/ /\ \,
-              ,/ /`     ||_|_|_||   ,/ /`/\`\ \,
-            ,/ /`    ==_`-------' ,/ /` ~\/~ `\ \,
-          ,/ /` __|     _       ,/ /`         =`\ \,
-        ,/ /`==_     __|___-  ,/ /` ==-=|__|     `\ \,
-      ,/ /`        --=      ,/ /`            __|-- `\ \,
-    ,/ /`  |__ ..----.. = ,/ /`()    .-"""""-.     ()`\ \,
-   / /`|     .'_.-;;-._'./ /; {__} .'.-"""""-.'.  {__} ;\ \'
-  |/`  |_| =/.; | || | ;|/` | |::|/.'  _____  '.\ |::| | `\|
-       |   |/_|_|_||_|_|_\| |=\::/||  /|_|_|\  || \::/ |
-       | -=|| | | || | | || |  || || |_|_|_|_| ||  |||_|
-       | , ||-|-|-||-|-|-||=|  JL || |_|_|_|_| ||  JL  |
-       |/_\||_|_|_||_|_|_||-|'    ||   .:::.   ||=_   _|
-       /_ (|| | | || | | || |  ==_|| /:::::::\ || __P__|
-       /_\ \|-|-|-||-|-|-|| |     || |::(`)::| ||/\ |  `\'
-      `>/ _\\_|_|_||_|_|_||-|-'|__|| \/`\+/`\/ ||||_____|
-      /_/   <-------------' |     ||()\_/Y\_/  ||/  || |
-     /  ` \_ ( ==_  __|-    |_|_  ||   / / \   || =_|| |
-    `/_) | _ <`   __        |   = ||  /_/ \_\  ||   || |
-     >  /     \ == _  ==_   | -   ||           ||=  || |
-    /_/   ( \  `\ _| =__   =|-__|_||-----------||_| || |
-   )-._/ _\ _,-('    __.;-'-;__     `"""""""""""    ||`"-._
-  '-,._   \__.-`-;''`          ``--'`""'"""`"""``-- `--'--. '
-       ```             ``         `""""'""""'"`""".--------'
+   ______________________________
+ / \                             \.           
+|   | Você chega na hospedaria.  |.
+ \_ | Uma cabana feita de madeira|  
+    | junto  com um ar úmido te  |.
+    | recepciona logo na entrada |.
+    | Distraída ao longe, uma    |.
+    | senhora com vestes surradas|.
+    | e remendadas               |.
+    | Ao ouvir seus passos, ela  |.
+    | se assusta e se afasta.    |.
+    |                            |. 
+    |   _________________________|___
+    |  /                            /.
+    \_/vi__________________________/.                                    /   \'
+                                                                         |    |
+                                                                        /_.--._\'                                                                              
+                                                                      ,  |=   |                                 
+                                                                    ,/ \,|  =-|                                 
+                                                                  ,/ /`\ \,   |                                 
+                                                                ,/ /`___`\ \,-|                                 
+                                                              ,/ /'.-:";-.`\ \|                                 
+                                                            ,/ /` //_|_|_\\ `\ \, ,/\,                                  
+                                                          ,/ /`   ||_|_|_||   `\;/ /\ \,                                  
+                                                        ,/ /`     ||_|_|_||   ,/ /`/\`\ \,                                  
+                                                      ,/ /`    ==_`-------' ,/ /` ~\/~ `\ \,                                  
+                                                    ,/ /` __|     _       ,/ /`         =`\ \,                                  
+                                                  ,/ /`==_     __|___-  ,/ /` ==-=|__|     `\ \,                                  
+                                                ,/ /`        --=      ,/ /`            __|-- `\ \,                                  
+                                              ,/ /`  |__ ..----.. = ,/ /`()    .-"""""-.     ()`\ \,                                  
+                                             / /`|     .'_.-;;-._'./ /; {__} .'.-"""""-.'.  {__} ;\ \'                                  
+                                            |/`  |_| =/.; | || | ;|/` | |::|/.'  _____  '.\ |::| | `\|                                  
+                                                 |   |/_|_|_||_|_|_\| |=\::/||  /|_|_|\  || \::/ |                                  
+                                                 | -=|| | | || | | || |  || || |_|_|_|_| ||  |||_|
+                                                 | , ||-|-|-||-|-|-||=|  JL || |_|_|_|_| ||  JL  |
+                                                 |/_\||_|_|_||_|_|_||-|'    ||   .:::.   ||=_   _|
+                                                 /_ (|| | | || | | || |  ==_|| /:::::::\ || __P__|
+                                                 /_\ \|-|-|-||-|-|-|| |     || |::(`)::| ||/\ |  `\'
+                                                `>/ _\\_|_|_||_|_|_||-|-'|__|| \/`\+/`\/ ||||_____|
+                                                /_/   <-------------' |     ||()\_/Y\_/  ||/  || |
+                                               /  ` \_ ( ==_  __|-    |_|_  ||   / / \   || =_|| |
+                                              `/_) | _ <`   __        |   = ||  /_/ \_\  ||   || |
+                                               >  /     \ == _  ==_   | -   ||           ||=  || |
+                                              /_/   ( \  `\ _| =__   =|-__|_||-----------||_| || |
+                                             )-._/ _\ _,-('    __.;-'-;__     `"""""""""""    ||`"-._
+                                            '-,._   \__.-`-;''`          ``--'`""'"""`"""``-- `--'--. '
+                                                 ```             ``         `""""'""""'"`""".--------'
 '''
 
 
@@ -594,7 +626,7 @@ evento_9 = '''
     |  /                            /.
     \_/vi__________________________/.
 '''
-evento10 = '''
+evento_10 = '''
   ______________________________
  / \                             \.           
 |   |Ao olhar ao redor e vasculhar|.
@@ -607,7 +639,7 @@ evento10 = '''
     |entrega a poção nas mãos do  |.
     |Rei que imediatamente se     |.
     |encarregou de imunizar o     |.
-    |povo. O reino de kwame estava|.
+    |povo. O reino de Kwame estava|.
     |livre!                       /
     |   _________________________|___
     |  /                            /.
@@ -754,6 +786,19 @@ esqueleto = '''
 '''
 
 caveira_fogo = '''
+
+
+         ██▒   █▓ ▒█████   ▄████▄      ███▄ ▄███▓ ▒█████   ██▀███   ██▀███  ▓█████  █    ██ 
+        ▓██░   █▒▒██▒  ██▒▒██▀ ▀█     ▓██▒▀█▀ ██▒▒██▒  ██▒▓██ ▒ ██▒▓██ ▒ ██▒▓█   ▀  ██  ▓██▒
+         ▓██  █▒░▒██░  ██▒▒▓█    ▄    ▓██    ▓██░▒██░  ██▒▓██ ░▄█ ▒▓██ ░▄█ ▒▒███   ▓██  ▒██░
+          ▒██ █░░▒██   ██░▒▓▓▄ ▄██▒   ▒██    ▒██ ▒██   ██░▒██▀▀█▄  ▒██▀▀█▄  ▒▓█  ▄ ▓▓█  ░██░
+           ▒▀█░  ░ ████▓▒░▒ ▓███▀ ░   ▒██▒   ░██▒░ ████▓▒░░██▓ ▒██▒░██▓ ▒██▒░▒████▒▒▒█████▓ 
+           ░ ▐░  ░ ▒░▒░▒░ ░ ░▒ ▒  ░   ░ ▒░   ░  ░░ ▒░▒░▒░ ░ ▒▓ ░▒▓░░ ▒▓ ░▒▓░░░ ▒░ ░░▒▓▒ ▒ ▒ 
+           ░ ░░    ░ ▒ ▒░   ░  ▒      ░  ░      ░  ░ ▒ ▒░   ░▒ ░ ▒░  ░▒ ░ ▒░ ░ ░  ░░░▒░ ░ ░ 
+             ░░  ░ ░ ░ ▒  ░           ░      ░   ░ ░ ░ ▒    ░░   ░   ░░   ░    ░    ░░░ ░ ░ 
+              ░      ░ ░  ░ ░                ░       ░ ░     ░        ░        ░  ░   ░     
+             ░            ░                                                                 
+
          .            )        )
                   (  (|              .
               )   )\/ ( ( (
@@ -781,37 +826,49 @@ caveira_fogo = '''
 '''
 
 caveira_morte = '''
+              
+              
+               ██▒   █▓ ▒█████   ▄████▄  ▓█████     ██▓███  ▓█████  ██▀███  ▓█████▄ ▓█████  █    ██ 
+              ▓██░   █▒▒██▒  ██▒▒██▀ ▀█  ▓█   ▀    ▓██░  ██▒▓█   ▀ ▓██ ▒ ██▒▒██▀ ██▌▓█   ▀  ██  ▓██▒
+               ▓██  █▒░▒██░  ██▒▒▓█    ▄ ▒███      ▓██░ ██▓▒▒███   ▓██ ░▄█ ▒░██   █▌▒███   ▓██  ▒██░
+                ▒██ █░░▒██   ██░▒▓▓▄ ▄██▒▒▓█  ▄    ▒██▄█▓▒ ▒▒▓█  ▄ ▒██▀▀█▄  ░▓█▄   ▌▒▓█  ▄ ▓▓█  ░██░
+                 ▒▀█░  ░ ████▓▒░▒ ▓███▀ ░░▒████▒   ▒██▒ ░  ░░▒████▒░██▓ ▒██▒░▒████▓ ░▒████▒▒▒█████▓ 
+                 ░ ▐░  ░ ▒░▒░▒░ ░ ░▒ ▒  ░░░ ▒░ ░   ▒▓▒░ ░  ░░░ ▒░ ░░ ▒▓ ░▒▓░ ▒▒▓  ▒ ░░ ▒░ ░░▒▓▒ ▒ ▒ 
+                 ░ ░░    ░ ▒ ▒░   ░  ▒    ░ ░  ░   ░▒ ░      ░ ░  ░  ░▒ ░ ▒░ ░ ▒  ▒  ░ ░  ░░░▒░ ░ ░ 
+                   ░░  ░ ░ ░ ▒  ░           ░      ░░          ░     ░░   ░  ░ ░  ░    ░    ░░░ ░ ░ 
+                    ░      ░ ░  ░ ░         ░  ░               ░  ░   ░        ░       ░  ░   ░     
+                   ░            ░                                            ░                      
 
-                      """" """$$$$be.
-                   -"           ^""**$$$e.
-                 ."                   '$$$c
-                /                      "4$$b
-               d  3                      $$$$
-               $  *                   .$$$$$$
-              .$  ^c           $$$$$e$$$$$$$$.
-              d$L  4.         4$$$$$$$$$$$$$$b
-              $$$$b ^ceeeee.  4$$ECL.F*$$$$$$$
-  e$""=.      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$
- z$$b. ^c     3$$$F "$$$$b   $"$$$$$$$  $$$$*"      .=""$c
-4$$$$L        $$P"  "$$b   .$ $$$$$...e$$        .=  e$$$.
-^*$$$$$c  %..   *c    ..    $$ 3$$$$$$$$$$eF     zP  d$$$$$
-  "**$$$ec   "   %ce""    $$$  $$$$$$$$$$*    .r" =$$$$P""
-        "*$b.  "c  *$e.    *** d$$$$$"L$$    .d"  e$$***"
-          ^*$$c ^$c $$$      4J$$$$$% $$$ .e*".eeP"
-             "$$$$$$"'$=e....$*$$**$cz$$" "..d$*"
-               "*$$$  *=%4.$ L L$ P3$$$F $$$P"
-                  "$   "%*ebJLzb$e$$$$$b $P"
-                    %..      4$$$$$$$$$$ "
-                     $$$e   z$$$$$$$$$$%
-                      "*$c  "$$$$$$$P"
-                       ."""*$$$$$$$$bc
-                    .-"    .$***$$$"""*e.
-                 .-"    .e$"     "*$c  ^*b.
-          .=*""""    .e$*"          "*bc  "*$e..
-        .$"        .z*"               ^*$e.   "*****e.
-        $$ee$c   .d"                     "*$.        3.
-        ^*$E")$..$"                         *   .ee==d%
-           $.d$$$*                           *  J$$$e
+                                                  """" """$$$$be.
+                                               -"           ^""**$$$e.
+                                             ."                   '$$$c
+                                            /                      "4$$b
+                                           d  3                      $$$$
+                                           $  *                   .$$$$$$
+                                          .$  ^c           $$$$$e$$$$$$$$.
+                                          d$L  4.         4$$$$$$$$$$$$$$b
+                                          $$$$b ^ceeeee.  4$$ECL.F*$$$$$$$
+                              e$""=.      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$
+                             z$$b. ^c     3$$$F "$$$$b   $"$$$$$$$  $$$$*"      .=""$c
+                            4$$$$L        $$P"  "$$b   .$ $$$$$...e$$        .=  e$$$.
+                            ^*$$$$$c  %..   *c    ..    $$ 3$$$$$$$$$$eF     zP  d$$$$$
+                              "**$$$ec   "   %ce""    $$$  $$$$$$$$$$*    .r" =$$$$P""
+                                    "*$b.  "c  *$e.    *** d$$$$$"L$$    .d"  e$$***"
+                                      ^*$$c ^$c $$$      4J$$$$$% $$$ .e*".eeP"
+                                         "$$$$$$"'$=e....$*$$**$cz$$" "..d$*"
+                                           "*$$$  *=%4.$ L L$ P3$$$F $$$P"
+                                              "$   "%*ebJLzb$e$$$$$b $P"
+                                                %..      4$$$$$$$$$$ "
+                                                 $$$e   z$$$$$$$$$$%
+                                                  "*$c  "$$$$$$$P"
+                                                   ."""*$$$$$$$$bc
+                                                .-"    .$***$$$"""*e.
+                                             .-"    .e$"     "*$c  ^*b.
+                                      .=*""""    .e$*"          "*bc  "*$e..
+                                    .$"        .z*"               ^*$e.   "*****e.
+                                    $$ee$c   .d"                     "*$.        3.
+                                    ^*$E")$..$"                         *   .ee==d%
+                                       $.d$$$*                           *  J$$$e
 '''
 
 inimigo_antigo = '''
@@ -888,37 +945,79 @@ _..--'.-(    |   `-''
                     '
 '''
 
+elf = '''
+                   .;;,.
+                  ; '" ;\ \//
+                 \|a (a|7 \//
+                 j| ..  | ||/
+                //'.--.')\-,/                                       |=|=================================================================================|=|
+              .-||- '' ||/  `-.                                     |=|                                      -Elf-                                      |=|
+             ;  | \ |/ |/ L.  ,|                                    |=| A sua vida é baseada em uma coisa: explorar para fazer novas descobertas        |=|
+             f\ |\| Y  || \ '._\'                                    |=| e talvez gerar riquezas com elas. Em uma de suas viagens exploratórias,         |=|
+            j | \|     (| |   | |                                   |=| você foi parar no Reino de Kwame, mas não imaginava os desafios que encontraria |=|
+           |  L_\         L.__: |                                   |=| por lá.                                                                         |=|
+            \(  '-.,-,    |   ; |                                   |=|                                                                                 |=|
+             |'-.'.L_rr>  f--f  |                                   |=|______________________________________legolas____________________________________|=|
+.-=,,______,--------- J-. ;  ;__                                     
+   ``"-,__   |  |      h  |  f  '--.__                              
+       `--;;--,_       h  f-j   |   __;==-.
+            / `-''-,,__J,'  \_..--:'-'     '
+            | |    `' --L7//'-'`|
+            | ,     ||  h    |  (
+            | ;     | \ J    j   |
+            | L__   | |  L_.'    |
+            |   |'-.| L.'h  |  : |
+            |;  \     |  J ; : : |
+            | :  (    \  'L| : : |
+            | ;   \'.--|    \  : |
+            | | : \    \-, /`\ : |
+            L-'-;__\   \\ '  | | |
+                    ;   \\   |'L_j
+                    _>  _|   |
+                   <___/ /-  \'
+                        /    /
+                        '---'
+'''
+
 
 
 points_vitoria = 0
 pegou_item = False
 
 
-apagador = lambda: print('\n'*120)
-def evento_1(points_vitoria = points_vitoria):
+def apagador():
+  print('\n'*120)
+
+def evento_1():
+  global points_vitoria 
   apagador()
-  print(cidade_inicio)
-  print(evento1)
   while True:
-    eventoresp = input('''
+    print(cidade_inicio)
+    print(evento1)
+    eventoresp = input(f'''
     @# INSTRUÇÃO: Digite "Gritar" ou "Andar" para confirmar a ação. @#
     |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
     O que fazer?
 
-      ➢ Gritar : "TEM ALGUÉM AÍ!??!?!?"
-      ➢ Andar:  Andar pela cidade
+      ➢ {vermelho('GRITAR')} : "TEM ALGUÉM AÍ!??!?!?"
+      ➢ {cyan('ANDAR')}:  Andar pela cidade
 
     |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
     ''').lower().strip()
     if eventoresp == 'gritar':
-      print('cri '*5000)
-      input('Clique enter para confirmar a burrada.')
+      print(vermelho('cri '*5000))
+      input('{} - Confirmar'.format(cyan('[ENTER]')))
       apagador()
       print('Você gritou e foi a mesma coisa que nada. O silêncio continuou na cidade.')
+      
+      input('{} - Confirmar'.format(cyan('[ENTER]')))
+      apagador()
     if eventoresp == 'andar':
       points_vitoria = points_vitoria + 1
+      print(f'Vocẽ tem : {cyan(points_vitoria)} pontos de vitória.')
+      input('{} - Confirmar'.format(cyan('[ENTER]')))
       evento_2()
       break
       
@@ -929,311 +1028,353 @@ def main(força,defesa):
   
   evento_1()
 
-def evento_2(points_vitoria=points_vitoria):
+def evento_2():
+  global points_vitoria
+  
   apagador()
   print(evento2)
   print(evento2_ascii)
-  dialogo1 = input('''
-    |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
+  while True:
+    dialogo1 = input(f'''
+      |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
-    O que fazer?
+      O que fazer?
 
-      ➢ Falar1 : 'Boa tarde, muleque'
-      ➢ Falar2:  'Olá jovem'
+        ➢ {vermelho('Falar1')}: 'Boa tarde, muleque'
+        ➢ {cyan('Falar2')}:'Olá jovem'
 
-    |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
-  ''').lower()
-  if dialogo1 == 'falar1' or 'falar2':
-    if dialogo1 == 'falar2':
-      points_vitoria = points_vitoria + 1
-      print('Você ganhou um ponto de vitória!')
-    print('O jovem se assusta.')
-    
-    print('Jovem desconhecido: Quem  é você? - Afastou-se imediatamente.')
-    
+      |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
+    ''').lower()
+    if dialogo1 == 'falar1' or 'falar2':
+      if dialogo1 == 'falar2':
+        points_vitoria = points_vitoria + 1
+        print('Você ganhou um {} de vitória!'.format(cyan('ponto')))
+        print((f'Vocẽ tem  {points_vitoria} pontos de vitória.'))
+        input('{} - Confirmar'.format(cyan('[ENTER]')))
+        apagador()
+        break
+      apagador()
+      break
+  print('O jovem se assusta.')
+
+  print('{}: Quem é você? - Afastou-se imediatamente.'.format(roxo('Jovem Desconhecido')))
+  input('{} - Confirmar'.format(cyan('[ENTER]')))
+      
+  while True:
     dialogo2 = input(f'''
-    |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
-
+    |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
     O que fazer?
-
-      ➢ Falar1 : 'Eu sou {nome}. Acabei de chegar de um navio e estou de passagem. Onde posso me hospedar?'
-      ➢ Falar2:  'Me chamo {nome}. Existe alguma alma viva aqui? Parece que estou numa cidade fantasma. Onde fica a hospedaria dessa cidade?!'
-
-    |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
+      ➢ {vermelho('Falar1')} : 'Eu sou {nome}. Acabei de chegar de um navio e estou de passagem. Onde posso me hospedar?'
+      ➢ {cyan('Falar2')}:  'Me chamo {nome}. Existe alguma alma viva aqui? Parece que estou numa cidade fantasma. Onde fica a hospedaria dessa cidade?!'
+    |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
     ''').lower()
     if dialogo2 == 'falar1' or 'falar2':
-      print('''O reino não estava esperando novos visitantes. Será que não tem um guarda controlando a entrada de estrangeiros? - resmungou o jovem. 
-      - apenas um lugar pode te aceitar se você tiver sorte. A hospedaria da guilda dos aventureiros.''')
+      apagador()
+      print(f'''
+      {(roxo('Jovem Desconhecido'))}: O reino não estava esperando novos visitantes. Será que não tem um guarda controlando a entrada de estrangeiros? - resmungou o jovem.
+      {(roxo('Jovem Desconhecido'))}: Apenas um lugar pode te aceitar se você tiver sorte. A hospedaria da guilda dos aventureiros. Fica na rua ao lado.''')
+      input('{} - Confirmar'.format(cyan('[ENTER]')))
+      apagador()
       dialogo2 = input(f'''
     |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
-
     O que fazer?
-
-      ➢ Falar : 'Tchau.'
+      ➢ {vermelho('Falar')} : 'Tchau.'
     |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
     ''').lower()
       evento3()
+      break
+
   
-def evento3(evento3 = evento3, points_vitoria = points_vitoria):
+def evento3():
+  global points_vitoria
   apagador()
-  print(evento3)
   print(hospedaria)
-  print('Senhora Desconhecida: O que vocẽ está fazendo aqui??')
+  print(f'{amarelo("Senhora Desconhecida")}: O que vocẽ está fazendo aqui?')
   print()
   while True:
-    evento3 = input('''
+    evento3 = input(f'''
 
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Falar1 : "Ué?"
-        ➢ Falar2:  "Quero me hospedar aqui"
+        ➢ {vermelho('Falar1')} : "Ué?"
+        ➢ {cyan('Falar2')}:  "Quero me hospedar aqui"
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       ''').lower()
     if evento3 == 'falar1' :
-      resposta = input('Senhora Desconhecida: Você ta sem mascara seu jacare?! --> ').lower()
+      apagador()
+      print(senhora)
+      resposta = input('{}: Você está sem máscara seu jacaré?! SIM/NÃO --> '.format(amarelo('Senhora Desconhecida'))).lower().strip()
       if resposta == 'sim':
-        print('Senhora desconhecida: Só entra de máscara!')
-        decisao = input('''
+        print('{}: Só entra de máscara!'.format(amarelo('Senhora Desconhecida')))
+        decisao = input(f'''
         
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Aceitar : Pegar a máscara
-        ➢ Recusar:  "Não vou úsar máscara!"
+        ➢ {vermelho('Aceitar')} : Pegar a máscara
+        ➢ {cyan('Recusar')}:  "Não vou úsar máscara!"
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
         
-        ''').lower()
+        ''').lower().strip()
         if decisao == 'aceitar':
           points_vitoria += 1
-          print(f'Você obteve um ponto de vitória! Total = {points_vitoria}')
+          print('Você obteve um {} de vitória! Total = {}'.format(cyan('ponto'), points_vitoria))
+          input('{} - Confirmar'.format(cyan('[ENTER]')))
+        elif decisao == 'recusar':
+          apagador()
+          print(expulso)
+          print('Você foi expulso de Kwame por não usar máscara. )')
+          input('{} - Confirmar'.format(cyan('[ENTER]')))
+
+          menu_principal()
+          
+
           
 
 
         
 
     elif evento3 == 'falar2':
-      print('Senhora Desconhecida: Não hospedamos viajantes a muito tempo. Você não sabe sobre a situação do Reino?')
-      resposta = input('''
-      @# INSTRUÇÃO: Digite "Gritar" ou "Andar" para confirmar a ação. @#
+      apagador()
+      print(f'{amarelo("Senhora Desconhecida")}: Não hospedamos viajantes a muito tempo. Você não sabe sobre a situação do Reino?')
+      resposta = input(f'''
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Falar : "Não. O que está acontecendo?"
+        ➢ {vermelho('falar')} : "Não. O que está acontecendo?"
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       ''').lower()
       if resposta == 'falar':
-        print('Senhora Desconhecida: Entre, vou lhe explicar a situação.')
-        input('Aperte enter para continuar')
+        apagador()
+        print(f'{amarelo("Senhora Desconhecida")}: Entre, vou lhe explicar a situação.')
+        input('{} - Confirmar'.format(cyan('[ENTER]')))
         evento4()
         break
+
+
+
 
 def evento4():
   apagador()
   print(evento_4)
   print(senhora)
-  while True:
-    print('Senhora : Há boatos que um mago chamado Saruman descobriu a cura para essa doença.')
-    input('Clique enter para confirmar')
-    print('Senhora: Mas ele colocou um desafio, que, o primeiro aventureiro que chegar ao topo da torre na qual ele mora, terá a poção de cura e poderá salvar a todos.')
-    input('Clique enter para confirmar')
-    print('Senhora: Des de então, muitos aventureiros tentaram passar pelos desafios da torre, mas nenhum conseguiu chegar até o final.')
-    input('Clique enter para confirmar')
+  print(f'{amarelo("Senhora")}: Há boatos que um mago chamado Saruman descobriu a cura para essa doença.')
+  input('{} - Confirmar'.format(cyan('[ENTER]')))
+  print(f'{amarelo("Senhora")}: Mas ele colocou um desafio, que, o primeiro aventureiro que chegar ao topo da torre na qual ele mora, terá a poção de cura e poderá salvar a todos.')
+  input('{} - Confirmar'.format(cyan('[ENTER]')))
+  print(f'{amarelo("Senhora")}: Des de então, muitos aventureiros tentaram passar pelos desafios da torre, mas nenhum conseguiu chegar até o final.')
+  input('{} - Confirmar'.format(cyan('[ENTER]')))
 
-    dialogo = input('''
+  while True:
+
+    dialogo = input(f'''
       
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Falar1 : "Aonde fica essa torre?"
-        ➢ Falar2:  "Existe alguma recompensa?"
+        ➢ {vermelho('Falar1')} : "Aonde fica essa torre?"
+        ➢ {cyan('Falar2')}:  "Existe alguma recompensa?"
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       ''').lower()
 
     if dialogo == 'falar1':
-      print('Senhora :Essa torre fica ao sul da capital de Kwame. Pelo portão sul você chega lá.')
+      print(f'{amarelo("Senhora")}: Essa torre fica ao sul da capital de Kwame. Pelo portão sul você chega lá.')
+      input('{} - Confirmar'.format(cyan('[ENTER]')))
+      apagador()
     if dialogo == 'falar2':
-      print('Senhora: Sim. O rei irá recompensar a quem ajudar o Reino com mil peças de ouro.')
-      input('Clique enter para confirmar')
+      print(f'{amarelo("Senhora")}: Sim. O rei irá recompensar a quem ajudar o Reino com mil peças de ouro.')
+      input('{} - Confirmar'.format(cyan('[ENTER]')))
       evento5()
       break
 
 def evento5():
   apagador()
-  dialogo = input('''
+  dialogo = input(f'''
       
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       Depois de saber sobre a Torre, vocẽ tem que tomar uma decisão
 
-        ➢ Torre : Viajar até a torre e enfrentar os desafios.
-        ➢ Barco: Voltar para o barco, e continuar sua viagem de aventuras.
+        ➢ {vermelho("Torre")} : Viajar até a torre e enfrentar os desafios.
+        ➢ {cyan('Barco')}: Voltar para o barco, e continuar sua viagem de aventuras.
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       ''').lower()
   if dialogo == 'torre':
-    if input('Confirmar decisão [enter]') == '':
+    if input('{} - Confirmar'.format(cyan('[ENTER]'))) == '':
       evento6()
   elif dialogo == 'barco':
+    apagador()
     fim_jogo()
 
 def evento6():
+  apagador()
   print(torre_sangrenta)
   print(dialogo_torre1)
-  input('Para confirmar - [ENTER]')
+  input('{} - Confirmar'.format(cyan('[ENTER]')))
   apagador()
 
   print(dialogo_torre2)
   print(inimigo_antigo)
 
-  resposta = input('''
+  resposta = input(f'''
     
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Atacar : "Atacar o inimigo"
-        ➢ Evitar: "Se esconder"
+        ➢ {vermelho('Atacar')} : "Atacar o inimigo"
+        ➢ {cyan('Evitar')}: "Se esconder"
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       ''').lower()
   if resposta == 'atacar':
-    ataque = input(''' 
+    ataque = input(f''' 
     |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ espada : Atacar o inimigo com a espada
+        ➢ {vermelho('Espada')} : Atacar o inimigo com a espada
         
 
     |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
       ''').lower()
     if ataque == 'espada':
-      print('Vocẽ acertou desprevenido seu inimigo com a espada!')
-      input('Confirmar - [ENTER] ')
-      print(f'“Ora ora {nome} Quanto tempo, não? Nem parece que a última vez que nós vimos você me EXPULSOU das nossas terras”')
-      input('Confirmar - [ENTER]')
-      dialogo = input(''' 
+      print(f'Vocẽ acertou desprevenido seu inimigo com a {vermelho("espada")}!')
+      input('{} - Confirmar'.format(cyan('[ENTER]')))
+      print(f'“Ora ora {nome} Quanto tempo, não? Nem parece que a última vez que ns vimos você me EXPULSOU das nossas terras”')
+      input('{} - Confirmar'.format(cyan('[ENTER]')))
+      dialogo = input(f''' 
         |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
           O que fazer?
 
-          ➢ raiva : O que vocẽ fez não tem perdão!  
-          ➢ ameaçar: Você vai pagar pelo que você fez!
+          ➢ {vermelho("Raiva")} : O que vocẽ fez não tem perdão!  
+          ➢ {cyan('Ameaçar')}: Você vai pagar pelo que você fez!
 
         |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
       ''').lower()
 
       if dialogo == 'raiva':
-        print('Inimigo Desconhecido: Vocẽ nem quis saber o que aconteceu!')
+        apagador()
+        print(f'{verde("Inimigo")}: Vocẽ nem quis saber o que aconteceu!')
         evento7()
       elif dialogo =='ameaçar':
-        print('Inimigo Desconhecido: Isso é o que vocẽ pensa!')
+        apagador()
+        print(f'{verde("Inimigo")}: Isso é o que vocẽ pensa!')
         evento7()
   elif resposta == 'evitar':
-    print('Vocẽ evitou o inimogo com sucesso!')
-    input('[Enter] - Confirmar')
+    print(f'Vocẽ evitou o inimigo com {verde("sucesso")}!')
+    input('{} - Confirmar'.format(cyan('[ENTER]')))
     evento8()
 
-    
-     
 def evento7():
-  apagador()
   global pegou_item
-  pegou_item = False
-
-  resposta = input('''
+  apagador()
+  
+  
+  resposta = input(f'''
     
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Barriga : Atacar com a espada na bariga.
-        ➢ Braço: Atacar com a espada no braço.
+        ➢ {vermelho("Barriga")} : Atacar com a espada na barriga.
+        ➢ {cyan("braço")}: Atacar com a espada no braço.
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       ''').lower()
 
   if resposta == 'barriga':
+    apagador()
     print('O inimigo tenta se defender com o escudo mas desequilibra e cai no chão.')
-    input('[ENTER] - Prosseguir')
-    resposta1 = input('''
+    input('{} - Confirmar'.format(cyan('[ENTER]')))
+    resposta1 = input(f'''
     
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Perdeu : Você perdeu, palhaço!
-        ➢ Desista: Você não tem chance, desista!
+        ➢ {vermelho("Perdeu")} : Você perdeu, palhaço!
+        ➢ {cyan("Desista")}: Você não tem chance, desista!
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       ''').lower()
     if resposta1 == 'perdeu' or 'desista':
-      print('Não, eu lhe imploro mesericórdia! Fique com minha espada e escudo, mas me deixe ir embora!') 
-      inimigo_dialogo = input('''
+      apagador()
+      print(f'                  {verde("Inimigo")}: Não, eu lhe imploro mesericórdia! Fique com minha espada e escudo, mas me deixe ir embora!') 
+      inimigo_dialogo = input(f'''
     
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Pegar : Pegar espada e escudo. (Os equipamentos são melhores que o seu.)
-        ➢ Falar: Não quero nada que é seu. Suma daqui.
+        ➢ {vermelho("Pegar")} : Pegar espada e escudo. (Os equipamentos são melhores que o seu.)
+        ➢ {cyan("Falar")}: Não quero nada que é seu. Suma daqui.
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       ''').lower()
       
       if inimigo_dialogo == 'falar':
-        pegou_item == False
+        pegou_item = False
         evento8()
       elif inimigo_dialogo == 'pegar':
-        pegou_item == True
+        pegou_item = True
         evento8()
 
 
   elif resposta == 'braço':
-    print('O inimigo conseguiu se esquivar a tempo, e lhe acertou no peito com a espada.') 
+    apagador()
+    print(f'O inimigo conseguiu se esquivar a tempo, e lhe acertou no peito com a {vermelho("espada")}.')
+    input('{} - Confirmar'.format(cyan('[ENTER]')))
     fim_jogo()
 
 def evento8():
+  global pegou_item
   apagador()
   print(evento_8)
   print(dragao)
-  resposta = input('''
+  resposta = input(f'''
     
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
       O que fazer?
 
-        ➢ Fugir : Fugir do dragão, subindo a escadaria.
-        ➢ Lutar: Lutar contra o dragão.
+        ➢ {vermelho("Fugir")} : Fugir do dragão, subindo a escadaria.
+        ➢ {cyan("Lutar")}: Lutar contra o dragão.
 
       |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
-      ''').lower()
-  if resposta == 'fugir' and pegou_item == False:
+      ''').lower().strip()
+  if resposta == 'fugir' and pegou_item == True:
+    apagador()
     print('O dragão tentou te acertar com as chamas, mas você foi protegido pelo escudo que está em suas costas.')
-    input('[enter] - Confirmar')
+    print('O mesmo escudo que você pegou do inimigo anterior.')
+    input('{} - Confirmar'.format(cyan('[ENTER]')))
     evento9()
   elif resposta == 'fugir' or 'lutar':
+    apagador()
     print('O dragão soltou um ataque de chamas e você morreu. ')
-    fim_jogo()
+  
+    fim_jogo_dragão
 
 def evento9():
   apagador()
@@ -1241,113 +1382,128 @@ def evento9():
   print(mago)
   lista_mago = ['capa', 'cajado', 'perna','Coração', True]
   lista_mago_dialogo = ['Foi pura sorte! DESAPAREÇA!', 'EU NÃO PRECISO DO CAJADO! BOLA DE FOGO!!!','AAAAAAAAAAh, minha perna!!!','aaaaaaaaaaaaaaaaah','Mago foi derrotado']
-  print('Mago: Haha! Outro espertinho achando que vai consegui me vencer!')
-  print('Mago: Vamos ver do que vocẽ é capaz!')
+  print(f'{vermelho("Mago")}: Haha! Outro espertinho achando que vai consegui me vencer!')
+  print(f'{vermelho("Mago")}: Vamos ver do que vocẽ é capaz!')
 
   while True:
     index = 0
-    dialogo = input('''
+    dialogo = input(f'''
 
         |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
         O que fazer?
 
-          ➢ falar: Me dê a poção!  
-          ➢ atacar: Ataque o mago com a espada.
-          ➢ Roubar: Tentar roubar a poção e fugir. 
+          ➢ {vermelho("Falar")}: Me dê a poção!  
+          ➢ {cyan("Atacar")}: Ataque o mago com a espada.
+          ➢ {roxo("Roubar")}: Tentar roubar a poção e fugir. 
 
         |-=x=-=x=-=x=--=x=-=x=-=x=--=x=-=x=-=x=-|
 
         ''').lower()
 
     if dialogo == 'falar':
-      print('Mago: Para você conseguir a poção terá que me enfrentar me uma batalha!')
+      print(f'{vermelho("Mago")}: Para você conseguir a poção terá que me enfrentar me uma batalha!')
 
     elif dialogo =='atacar':
       for i in lista_mago:
-        continuar = input('Atacar').lower()
-        print(f'Mago: {lista_mago_dialogo[index]}')
-        print(f'Você acertou >{i}< do mago.')
-        index += 1
         if i == True:
-          input('[Enter] - Para Confirmar')
+          print(f'Você matou o {vermelho("Mago")}.')
+          input(f'{cyan("[ENTER]")} - Para Confirmar')
           evento10()
+          break
+
+        input(f'{vermelho("[ENTER]")} - Atacar').lower()
+        mago_color = vermelho('Mago')
+        print('Você acertou >{}< do {}.'.format(vermelho(i), vermelho("Mago")))
+        print(f'{mago_color}: {lista_mago_dialogo[index]}')
+        
+        index += 1
+        
+      break
     elif dialogo == 'roubar':
-      print('O mago te acertou com uma bola de fogo!')
-      print('Você morreu')
-      fim_jogo_dragão()
+      print(f'O {vermelho("Mago")} te acertou com uma bola de {vermelho("FOGO")}!')
+      print(f'{vermelho("VOCÊ")} morreu')
+      fim_jogo()
+      print(f'Você morreu para o {vermelho("Mago")}!')
+      break
 
 def evento10():
+  global points_vitoria
   apagador()
   print(rei)
-  print(evento10)
-  input('[enter] - Confirmar')
+  print(evento_10)
+  input('{} - Confirmar'.format(cyan('[ENTER]')))
   apagador()
   print(king)
 
-  if points_vitoria > 2:
-    proposta = input('''Rei: Eu não tenho palavras para te agradecer por tudo o que fez pelo nosso povo. 
+  if points_vitoria > 2 and escolha == 1:
+    proposta = input(f'''{verde("Rei")}: Eu não tenho palavras para te agradecer por tudo o que fez pelo nosso povo. 
   Finalmente Kwame pode respirar tranquila novamente! Quero lhe dar uma recompensa, meu caro. 
   Além de riquezas, quero te oferecer um cargo como meu guarda pessoal! Tudo o que precisar, estará ao seu dispor
-  Aceitar / Recusar
+  {verde("Aceitar")} / {vermelho("Recusar")}
   ''').lower()
   
     if proposta == 'aceitar':
-      print('Rei: Ótimo!!!')
-      input('[ENTER] - Confirmar')
+      print(f'{verde("Rei")}: Ótimo!!!')
+      input(f'{vermelho("[ENTER]")} - Confirmar')
       apagador()
-      print(guarda_real)
+      if escolha == 1:
+        print(guarda_real)
+      elif escolha ==2:
+        print(king)
+      elif escolha ==3:
+        print(king)
     
     elif proposta =='recusar':
-      print('Rei: É uma pena. O Reino de Kwame sempre estára de portas abertas para você aventureiro!')
+      print(f'{verde("Rei")}: É uma pena. O Reino de Kwame sempre estára de portas abertas para você aventureiro!')
+      print(rei)
   else:
-    print('Eu não tenho palavras para agradecer aventureiro. Tome aqui suas mil moedas de ouro.')
-
+    print(f'{verde("Rei")}: Eu não tenho palavras para agradecer aventureiro. Tome aqui suas mil moedas de ouro.')
 
 def fim_jogo_dragão():
   apagador()
   print(caveira_fogo)
-  print('Você morreu para o dragão. ')
-  print('Derrota!')
+  print(f'Você morreu para o vermelho("Dragão"). ')
+  print(f'vermelho("DERROTA")!')
+
 def fim_jogo():
   apagador()
   print(caveira_morte)
   print('VOCÊ PERDEU!')
 
-
-
-def criação_personagem():
+def intro():
+  
   apagador()
   print(reaper)
-  global nome
-  nome = input('''
-  
-  ~~~> ''')
-  print(nome)
+  input('{} - Confirmar'.format(cyan('[ENTER]')))
+  apagador()
   escolha_raça()
-
 
 def sobre_mim():
   apagador()
   print('''
-RPG - A Torre Sangrenta
+  RPG - A Torre Sangrenta
 
-Um jogo baseado em texto.
+  Um jogo baseado em texto.
 
-  
-## Me encontre
-Se você jogar o jogo, sinta-se a vontade de me chamar no discord.
 
-## Versão
-* Python 3.7
+  ## Me encontre
+  Se você jogar o jogo, sinta-se a vontade de me chamar no discord.
 
-# sobre este projeto
-Comecei a desenvolver ele durante o projeto Vamo AI do Ifood com parceria da Resilia.
+  ## Versão
+  * Python 3.7
 
-# Muito obrigado por jogar!
+  # sobre este projeto
+  Comecei a desenvolver ele durante o projeto Vamo AI do Ifood com parceria da Resilia.
 
-''')
-  voltar = input('[ENTER] - Voltar')
+  # Arts
+  https://www.asciiart.eu/
+  https://www.patorjk.com/software/taag/#p=display&f=Ogre&t=Vamo%20AI
+
+  # Muito obrigado por jogar!
+
+  ''')
+  voltar = input('{} - VOLTAR'.format(cyan('[ENTER]')))
   while True:
     if voltar == '':
       menu_principal()
@@ -1357,18 +1513,27 @@ def menu_principal():
   while True:
             print(title)
           
-            print(f'''                                              
-                                                                                                                                               .---.\'
-                                                                                                                                              /  .   \'
+            print(f'''
+
+
+
+
+
+
+
+
+
+                                                                                                                                               .---..
+                                                                                                                                              /  .   |
                                                                                                                                              |\_/|   |
                                                                                                                                              |   |  /|
                                                                                         .----------------------------------------------------------' |
                                                                                        /  .-.                                                        |
-                                                                                      |  /   \                 1 - Novo jogo                         |
-                                                                                      | |\_.  |                2 - Pontuação                         |
-                                                                                      |\|  | /|                3 - Sobre                             |
-                                                                                      | `---' |                4 - Sair                              |
-                                                                                      |       |                                                      | 
+                                                                                      |  /   \                     ➢  1 - Jogar                      |
+                                                                                      | |\_.  |                                                      |
+                                                                                      |\|  | /|                    ➢  2 - Sobre                      |
+                                                                                      | `---' |                                                      |
+                                                                                      |       |                    ➢  3 - Sair                       | 
                                                                                       |       |                                                     /
                                                                                       |       |----------------------------------------------------'
                                                                                       \       |
@@ -1382,13 +1547,12 @@ def menu_principal():
             #Novo jogo
             if escolha == 1:
               print(cidade)
-              continuar = input('\n\nAperte enter para prosseguir')
+              continuar = input('{} - Confirmar'.format(cyan('[ENTER]')))
               if continuar == '':
-                criação_personagem()
-                
-              
+                intro()
             #Pontuação
             elif escolha == 2:
+              sobre_mim()
               pass
               break
             #Sobre mim
@@ -1405,6 +1569,9 @@ def menu_principal():
             #Valor inválido
             else:
               print('Porfavor, digite o valor correto.')
+              input('{} - Confirmar'.format(cyan('[ENTER]')))
+              apagador()
+              menu_principal()
             break
 
 def atributos():
@@ -1417,53 +1584,67 @@ def atributos():
     main(força,defesa)
   else:
     print('Aperte enter para continuar.')
-                 
-              
+                     
 def escolha_raça():
+  global nome
+  global escolha
   apagador()
-  print("""
+  print(("""
                                                                                                             <-------------------->
                                                                                                             |Escolha o personagem|
-                                                                                                            |         ☰         |
+                                                                                                            |         ☰          |
                                                                                                             <-------------------->
-                                                                                                            |   1 ➤  Viking      |
+                                                                                                            |   1 ➤  {}     |
                                                                                                             <-------------------->
-                                                                                                            |   2 ➤  Amazona     |
+                                                                                                            |   2 ➤  {}  |
                                                                                                             <-------------------->
-                                                                                                            |   3 ➤  Elf         |
+                                                                                                            |   3 ➤  {}      |
                                                                                                             <-------------------->
-                                                                                                            |   4 ➤  Voltar      |
+                                                                                                            |   4 ➤   Voltar     |
                                                                                                             <-------------------->
 
-            """)
+            """.format(cyan('Viking'), verde('Amazona  '), amarelo('Elf  '))))
 
 
   escolha = int(input( '                                                                                            ~~> '))
-  
+  apagador()
   #Viking
   if escolha == 1:
     apagador()
     print(viking)
     confirmar = input('Deseja jogar como viking?')
     if confirmar.lstrip().lower() == 'sim':
+      nome = input('''Qual será o seu nome? 
+                            ➢  ''')
       atributos()
-
-      
-      
-
-
   #Amazona
   elif escolha == 2:
     apagador()
     print(amazona)
+    confirmar = input('Deseja jogar como Amazona?')
+    if confirmar.lstrip().lower() == 'sim':
+      nome = input('''Qual será o seu nome? 
+                            ➢  ''')
+      atributos()
     pass
+  #elf
   elif escolha == 3:
+    apagador()
+    print(elf)
+    confirmar = input('Deseja jogar como Elf? ')
+    if confirmar.strip().lower() == 'sim':
+       nome = input('''Qual será o seu nome? 
+                            ➢  ''')
+       atributos()                            
     pass
   elif escolha == 4:
     menu_principal()
     pass
   else:
     print('Escolha um personagem válido.')
+    return escolha
+
+
 
 menu_principal()
 
